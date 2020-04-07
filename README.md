@@ -38,7 +38,7 @@ fn main() {
 End of proc macro input.
 ```
 
-However, both cargo run and cargo expand fully removes `x`.
+However, both cargo run and cargo expand fully removes/handles `x`.
 
 Cargo run:
 
@@ -120,5 +120,5 @@ fn main() {
 Here the proper cfg stays inside `LateResources`.
 
 Similar references:
-[](https://stackoverflow.com/questions/49506485/how-to-provide-attributes-for-fields-for-struct-annotated-with-an-attribute-itse)
-[](https://github.com/rust-lang/rust/issues/45358)
+[How to provide attributes for fields…](https://stackoverflow.com/questions/49506485/how-to-provide-attributes-for-fields-for-struct-annotated-with-an-attribute-itse)
+[rust-lang/issue/45358](https://github.com/rust-lang/rust/issues/45358)
