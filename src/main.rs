@@ -9,22 +9,16 @@ struct LateResources {
 
 #[init]
 fn main() {
-    let x = LateResources {
+    // The cfg inside res disappears as seen from within proc_macro_attribute
+    let res = LateResources {
         #[cfg(feature = "feature_x")]
         x: 0,
         dummy: ()
     };
 
+    println!("{:#?}", res);
 
-    // cargo run produces:
-    /*
-      LateResources {
-          dummy: (),
-          }
-     */
-    println!("{:#?}", x);
-
-    // This works
+    // This cfg remains for the proc_macro_attribute to work on
     #[cfg(feature = "feature_x")]
     println!("Hello, world!");
 }
