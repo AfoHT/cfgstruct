@@ -43,3 +43,7 @@ LateResources {
     dummy: (),
     }
 ```
+
+Similar references:
+[](https://stackoverflow.com/questions/49506485/how-to-provide-attributes-for-fields-for-struct-annotated-with-an-attribute-itse)
+[](https://github.com/rust-lang/rust/issues/45358)
